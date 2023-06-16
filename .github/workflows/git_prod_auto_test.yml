@@ -12,7 +12,7 @@ jobs:
         runs-on: ubuntu-latest
         name: git_prod_auto_test
         steps:
-        - name: git_prod_auto_test
+        - name: actions/checkout@v2
           id: git_prod_auto_test
           uses: pdoro112000/git_prod_auto_test@main
           with:

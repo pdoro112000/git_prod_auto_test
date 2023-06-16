@@ -12,9 +12,8 @@ jobs:
         runs-on: ubuntu-latest
         name: git_prod_auto_test
         steps:
-        - name: actions/checkout@v2
+        - uses: pdoro112000/git_prod_auto_test@main
           id: git_prod_auto_test
-          uses: pdoro112000/git_prod_auto_test@main
           with:
             google-api-service-account-credentials: ${{ secrets.GOOGLE_SHEETS_CREDENTIALS }}
             document-id: '1lbfEtB21AmpjAWQsInwz60IjV9gTfpaRbzAeoTLsYiQ'

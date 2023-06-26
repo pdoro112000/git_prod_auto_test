@@ -14,7 +14,7 @@ jobs:
         steps:
         - name: git_prod_auto_test
           id: git_prod_auto_test
-          uses: pdoro112000/git_prod_auto_test@dev
+          uses: pdoro112000/git_prod_auto_test@main
           with:
             google-api-service-account-credentials: ${{ secrets.GOOGLE_SHEETS_CREDENTIALS }}
             document-id: '1lbfEtB21AmpjAWQsInwz60IjV9gTfpaRbzAeoTLsYiQ'

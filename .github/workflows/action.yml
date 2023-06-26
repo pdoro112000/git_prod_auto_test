@@ -12,7 +12,7 @@ jobs:
         runs-on: ubuntu-latest
         name: git_prod_auto_test
         steps:
-        - uses: pdoro112000/git_prod_auto_test@main
+        - uses: pdoro112000/git_prod_auto_test@test_branch
           id: git_prod_auto_test
           with:
             google-api-service-account-credentials: ${{ secrets.GOOGLE_SHEETS_CREDENTIALS }}

@@ -1,0 +1,20 @@
+name: git_prod_auto_test
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  pull_request:
+    types: [ labeled ]
+
+jobs:
+    git_prod_auto_test:
+        if: ${{ github.event.label.name == 'test' }}
+        runs-on: ubuntu-latest
+        name: git_prod_auto_test
+        steps:
+        - uses: pdoro112000/git_prod_auto_test@test_branch
+          id: git_prod_auto_test
+          with:
+            google-api-service-account-credentials: ${{ secrets.GOOGLE_SHEETS_CREDENTIALS }}
+            document-id: '1lbfEtB21AmpjAWQsInwz60IjV9gTfpaRbzAeoTLsYiQ'
+            sheet-name: 'Github Prod Release Automation Test'
